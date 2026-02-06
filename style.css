@@ -1,129 +1,96 @@
-* 
-
-{
+/* RESET */
+* {
   box-sizing: border-box;
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* BACKGROUND */
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0b4aa2, #f1b600);
-}
-
-/* CENTER CONTENT */
-.wrapper {
-  width: 100%;
-  min-height: 100vh;
-  padding: 16px;
+  background: linear-gradient(135deg, #0b4ea2, #f2c200);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
-
-/* BIGGER CARD FOR PHONE */
+/* CARD CONTAINER */
 .card {
-  background: #fff;
   width: 100%;
-  max-width: 420px; /* mas malaki sa phone */
-  padding: 28px 22px;
-  border-radius: 20px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+  max-width: 420px; /* BIGGER on phone */
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 26px 22px 30px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
 }
 
-
-/* TITLE */
-h1 {
+/* HEADER TEXT */
+.card h1 {
+  font-size: 22px;
+  color: #0b4ea2;
   text-align: center;
-  color: #0b4aa2;
-  font-size: 24px;         /* ⬅️ bigger */
-  margin-bottom: 12px;
+  margin: 6px 0 10px;
 }
 
-/* SUBTITLE */
-.subtitle {
-  text-align: center;
+.card p {
   font-size: 15px;
   color: #555;
-  margin-bottom: 24px;
+  text-align: center;
+  margin-bottom: 22px;
 }
 
-.subtitle span {
-  color: #777;
-  font-size: 14px;
-}
-
-/* FORM */
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
+/* LABELS */
 label {
   font-size: 14px;
   font-weight: 600;
+  color: #333;
   margin-bottom: 6px;
+  display: block;
 }
 
-/* INPUTS – BIG FOR THUMBS */
+/* INPUTS */
 input {
   width: 100%;
-  padding: 16px;          /* ⬅️ taller */
-  font-size: 17px;        /* ⬅️ no zoom bug */
-  border-radius: 14px;
+  height: 52px; /* TALLER */
+  padding: 0 14px;
+  font-size: 16px; /* Bigger text */
+  border-radius: 12px;
   border: 1px solid #ccc;
+  margin-bottom: 16px;
 }
 
 input:focus {
   outline: none;
-  border-color: #f1b600;
-  box-shadow: 0 0 0 3px rgba(241,182,0,0.25);
+  border-color: #0b4ea2;
 }
 
-/* BUTTON – FULL WIDTH & BIG */
+/* BUTTON */
 button {
-  margin-top: 26px;
   width: 100%;
-  padding: 18px;
+  height: 56px; /* BIG BUTTON */
   font-size: 18px;
   font-weight: bold;
-  border-radius: 16px;
-  border: none;
-  background: #0b4aa2;
   color: #fff;
+  background: #0b4ea2;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-/* RESULT */
-#result {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 600;
+button:hover {
+  background: #083b7d;
 }
 
-@media (max-width: 480px) {
-
-  h1 {
-    font-size: 22px;
+/* EXTRA LARGE PHONES */
+@media (min-width: 480px) {
+  .card {
+    max-width: 480px;
+    padding: 30px;
   }
 
-  .subtitle {
-    font-size: 14px;
-  }
-
-  label {
-    font-size: 14px;
-  }
-
-  input {
-    font-size: 16px; /* para hindi mag-zoom weird sa iPhone */
-    padding: 16px;
-  }
-
-  button {
-    font-size: 18px;
-    padding: 16px;
+  .card h1 {
+    font-size: 24px;
   }
 }
