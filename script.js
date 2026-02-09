@@ -1853,6 +1853,6 @@ function checkMETV() {
       "<span style='color:#188038;'>🎉 Congratulations! You are <b>METV</b>.</span>";
   } else {
     result.innerHTML =
-      "<span style='color:#d93025;'>❌ Sorry, you are <b>NOT METV</b>. <p>Please check your account to verify why you are not eligible. Thank you! </p).</span>";
+      "<span style='color:#d93025;'>❌ Sorry, you are <b>NOT METV</b>. <p>Please check your account to verify why you are not eligible. Thank you! </p) </span>";
   }
 }
